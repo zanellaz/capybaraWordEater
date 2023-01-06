@@ -6,6 +6,7 @@ export const S = {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
     `,
     Wrapper: styled.div`
         display: flex;

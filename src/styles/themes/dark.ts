@@ -5,8 +5,7 @@ const DefaultTheme = {
         secondary: '#ffffff',
         fontPrimary: '#ffffff',
         fontSecondary: '#000000'
-    },
-    icon: "blackIcon.svg"
+    }
 }
 
 export default DefaultTheme
