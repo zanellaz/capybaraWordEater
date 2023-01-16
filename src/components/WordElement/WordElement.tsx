@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { S } from './index'
+import Word from "../../Word.class";
 
 interface Props {
-    text: string
+    word: Word
 }
 
-const WordElement: FC<Props> = ({ text }) => {
+const WordElement: FC<Props> = ({ word }) => {
+    const text = word.getText()
     return (
         <S.Wrapper>
             {Array.from(text).map((letter, i) => {

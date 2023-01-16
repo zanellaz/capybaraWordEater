@@ -7,6 +7,8 @@ import light from './styles/themes/light'
 import dark from './styles/themes/dark'
 import GlobalStyle from './styles/global';
 import Word from './Word.class';
+import AmountInput from './components/AmountInput/AmountInput';
+import Button from '@mui/material/Button';
 
 function App() {
   const [wordsLength, setWordsLength] = useState(10)
@@ -25,12 +27,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header toggleTheme={toggleTheme} />
-      <button onClick={toggleTheme}> texto </button>
-      <button onClick={changeWords}>{firstAttempt ? 'start' : 'restart'}</button>
-      <input 
-        type="number"
-        value={wordsLength}
-        onChange={({ target }) => setWordsLength(Number(target.value))}/>
+      <Button onClick={toggleTheme}> tema </Button>
+      <Button onClick={changeWords}>{firstAttempt ? 'start' : 'restart'}</Button>
+      <AmountInput 
+        value={wordsLength.toString()}
+        setWordsLength={setWordsLength}
+        />
       <Words words={words} />
       <GlobalStyle />
     </ThemeProvider>

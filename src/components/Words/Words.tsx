@@ -11,7 +11,7 @@ const Words: FC<Props> = ({ words }) => {
     return (
         <S.Wrapper>
             {words.map(word => {
-                return <WordElement key={`${word.getText}${word.id}`} text={word.getText()} />
+                return <WordElement key={`${word.getText}${word.id}`} word={word} />
             })}
         </S.Wrapper>
     );
